@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "NUCareers Patch",
+  "short_name": "NUCareers Patch",
+  "description": "Patches NUCareers to open links in a new tab rather than forcing
+  you to continuously go back",
+  "version": "1.0",
+
+  "icons": {
+    "128": "icon_128.png"
+  },
+
+
+   "content_scripts": [
+    {
+
+    "matches": ["https://nucareers.northeastern.edu/myAccount/co-op/jobs.htm"],
+     "js": ["run_patch.js"],
+     "run_at": "document_idle"
+    }],
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ]
+}

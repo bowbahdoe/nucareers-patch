@@ -60,30 +60,3 @@ for(let e of document.getElementsByClassName("orbis-posting-actions")) {
   new MutationObserver(() => alert("Changed")).observe(e,
                             ALL_CHANGES)
 }
-
-
-
-/*var getAllNumberButtons = function() {
-  let links = document.getElementsByTagName('a')
-  links = Array.from(links);
-
-  let numbers = new Set()
-  for(let i = 1; i<100; i++) {
-     numbers.add(i.toString())
-  }
-
-  links = links.filter(link => numbers.has(link.innerHTML))
-  return links
-}
-
-var patchNumberButtons = function() {
-  let buttons = getAllNumberButtons();
-  buttons.map(remove_on_click)
-  buttons = getAllNumberButtons();
-
-  for(let button of buttons) {
-    prevOnClick = button.onclick
-    button.setAttribute("onclick",
-      `loadPostingTable('', '',  'Forward', ${button.innerHTML},'myProgramPostingsCount','', patchAllJobLinks)`)
-  }
-}*/
